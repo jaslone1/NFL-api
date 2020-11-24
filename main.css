@@ -1,0 +1,12 @@
+body {
+}
+.container {
+  min-width: 90%;
+}
+.hideRow {
+  display: none;
+  min-width: 100%;
+}
+.newSearch {
+  display: none;
+}

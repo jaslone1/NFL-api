@@ -1,6 +1,10 @@
 $(() => {
   $('form').on('submit', event=>{
       event.preventDefault();
+      $('.newSearch').css('display','inline')
+      $('.searchForm').css('display', 'none')
+      $(".results").append(
+        "<tr><th>" + "opponent" + "</th><th>" + "line yards" + "</th><th>" + "explosiveness" + "</th></tr>")
 
 
 
@@ -14,8 +18,8 @@ $(() => {
     }).then(
       (data)=>{
         for (var i = 0; i < data.length; i++) {
-          console.log(data[i].offense.explosiveness);
-          $(".results").append("<tr><td>" + data[i].offense.explosiveness + "</td><td>" + data[i].offense.ppa + "</td></tr>")
+          $(".results").append(
+            "<tr><td>" + data[i].opponent + "</td><td>" + data[i].offense.explosiveness + "</td><td>" + data[i].offense.ppa + "</td></tr>")
         }
     })
   })

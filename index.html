@@ -4,17 +4,21 @@
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="main.css">
     <title></title>
   </head>
   <body>
-    <div class="userInput">
-      <form>
+    <div class="container">
+      <div class="userInput">
+        <button class="newSearch" type="button" onclick="window.location.href=window.location.href" name="reloadbutton">new search</button>
+      <form class="searchForm">
   	     <input class="searchBar "type="text"/>
   	     <input class="searchBtn" type="submit" value="Search" />
       </form>
     </div>
     <table class= "results">
-      <tr>
+      <tr class="hideRow">
+        <th>opponent</th>
         <th>line yards</th>
         <th>explosiveness</th>
       </tr>
@@ -23,5 +27,7 @@
         <td class="explosiveness"></td>
       </tr>
     </table>
+    </div>
+
   </body>
 </html>
